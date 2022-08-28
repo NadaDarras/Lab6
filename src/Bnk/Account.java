@@ -16,9 +16,11 @@ public class Account {
 		return balance;
 	}
 	Logger logger;
-	public void setBalance(float balance,Log log) {
+	public void setBalance(float balance) {
 		this.balance = balance;
-		 Logger.log(log); 
+		Log log =new Log(System.currentTimeMillis(), this.id, "accaount with id " +id +" balance ", balance);
+
+		Logger.log(log); 
 		//System.out.print(log.getData());	
 	}
 	/*	public void  log(Log log ){

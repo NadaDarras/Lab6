@@ -17,10 +17,7 @@ public class Log {
 	}
 
 
-	public String getData(){
-		return "Log [timestamp=" + timestamp + ", client_id=" + client_id + ", description=" + description + ", amount="
-				+ amount + "]";
-	}
+
 	@Override
 	public String toString() {
 		return "Log [timestamp=" + timestamp + ", client_id=" + client_id + ", description=" + description + ", amount="
@@ -32,17 +29,7 @@ public class Log {
 
 	public static void main(String[] args) {
 
-		System.out.println("view info ");
-		Log log = new Log(28648235, 6373, " update – opened", 120000);
-		System.out.println(log.getData());
 
-		System.out.println("view info log");
-		Logger logger= new Logger("null");
-		Logger.log(log);
-
-		Account account= new Account(7835, 137889890);
-		System.out.println("\n account balance");
-		account.setBalance(900000, log);
 
 
 	}

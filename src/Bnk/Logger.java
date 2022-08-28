@@ -12,7 +12,7 @@ public class Logger  {
 	}
 
 	public  static void  log( Log log){
-	System.out.print(log.getData());	
+	System.out.print(log.toString());	
 	}
 
 

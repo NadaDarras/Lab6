@@ -90,11 +90,11 @@ public  abstract class Clinet {
 
 	//remove the account with the same id from the array
 
-	public void remove_account (int id) {
+	public void remove_account (Account acc) {
       
 		for(int i =0 ;i <accounts.length;++i){ 
 
-			if (accounts[i].id ==id) {
+			if (accounts[i].equals(acc)) {
 		
 				Log log =new Log(System.currentTimeMillis(), this.id, "accaount with id " +id +"  removed", balance);
 				balance= balance+accounts[i].balance;

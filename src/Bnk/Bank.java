@@ -7,24 +7,24 @@ public class Bank {
 	private static	Clinet[] clients;
 	private static Logger logService;
 	private static 	Account updater;
-	
+
 	private static float totalCommission ;
 
 	private Bank() {
-	
+
 		Bank.clients =new Clinet [100];
 	} 
-	
-	// create one object of bank 
-	 public static Bank getBank () {
-		 if (singleBank== null) {
-			 singleBank=new Bank() ;
-		 }
-		  return singleBank;
-	 } 
-	
 
-	
+	// create one object of bank 
+	public static Bank getBank () {
+		if (singleBank== null) {
+			singleBank=new Bank() ;
+		}
+		return singleBank;
+	} 
+
+
+
 	public  static float getBalance() {
 		float bankBalance = 0;
 		for ( int i=0;i<clients.length;i++) {
@@ -33,20 +33,6 @@ public class Bank {
 
 		return  bankBalance;
 	}
-
-
-	/*   // create a new array of size 100+1
-	  Clinet newArray[] = new Clinet[100 + 1];
-
-      // insert the elements from
-      // the old array into the new array
-      // insert all elements till n
-      // then insert client at 100+1
-      for (int i = 0; i < 101; i++)
-    	  newArray[i] = newArray[i];
-
-      newArray[101] = clint;*/
-
 
 	public  static void  addClient(Clinet client ) {	
 
@@ -57,15 +43,15 @@ public class Bank {
 			Clinet cli =clients[i];
 			if (cli== null) {
 				cli=client;
-				 Logger.log(log); 
+				Logger.log(log); 
 			}}
-		
 
-	 
+
+
 		//System.out.print(log.getData());
 	}
 
-	
+
 
 	public static  Clinet[] getClients() {
 
@@ -77,22 +63,22 @@ public class Bank {
 	public  static void viewLogs () {
 
 		Log []log = logService.getLogs();
-	
-		
+
+
 	}
 
 	public static void startAccountUpdater() {
 
 	}
-	
-	
-	
-	
+
+
+
+
 	public  static void printClientList() {
-		
+
 	}
-	
-	
+
+
 
 	public static void removeClient(Clinet clin) {
 		for(int i =0 ;i <clients.length;++i){ 
@@ -105,13 +91,13 @@ public class Bank {
 				break;
 			}
 
-	    }
+		}
 	}
-	
+
 	//update comm. from clint class 
 	public static void updateTotalCommission( float comision) {
 
-			 totalCommission= totalCommission+ comision;
+		totalCommission= totalCommission+ comision;
 
 	}
 
